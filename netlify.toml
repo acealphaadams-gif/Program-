@@ -1,0 +1,24 @@
+# Alpha AI — Netlify
+# Site settings → Environment variables:
+#   OPENAI_API_KEY            (required)
+#   OPENAI_MODEL              (optional, default gpt-4o)
+
+[build]
+  command = "npm ci || npm install; npm run build"
+  publish = "dist/client"
+
+[build.environment]
+  NODE_VERSION = "22"
+  # Prefer Netlify-oriented server output when the preset is supported
+  NITRO_PRESET = "netlify"
+
+[functions]
+  node_bundler = "esbuild"
+  included_files = ["dist/server/**", "dist/**"]
+
+# SPA / SSR fallback handled by the server function
+[[redirects]]
+  from = "/api/*"
+  to = "/.netlify/functions/server"
+  status = 200
+  force = true

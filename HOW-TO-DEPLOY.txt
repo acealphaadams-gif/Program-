@@ -1,0 +1,1 @@
+Alpha AI (OpenAI version) for Netlify. Upload this folder to GitHub, then Netlify Import from GitHub. Build: npm run build. Publish: dist/client. Set OPENAI_API_KEY (and optionally OPENAI_MODEL=gpt-4o), delete any old AI_API_KEY / AI_BASE_URL / AI_MODEL variables, then redeploy.

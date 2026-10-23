@@ -1,0 +1,45 @@
+ALPHA AI — FINAL WORKSPACE UPDATE
+=================================
+
+Visual direction
+----------------
+The default interface palette uses calm cyan, turquoise/teal, cool white, and
+soft blue accents. The workspace uses accessible focus rings, responsive
+layouts, reduced-motion support inherited from the app, clear empty states,
+and keyboard-friendly controls.
+
+Learning Workspace features
+---------------------------
+- Overview with checklist-derived progress, saved-note count, and flashcard count.
+- Editable study goals with completion checkboxes, add/remove actions, and export.
+- Study-plan view with progress calculated from the user's own checklist.
+- Study notes with subject labels, local browser saving, search, in-place editing,
+  deletion, and Markdown export.
+- Flashcards with reveal/hide, previous/next navigation, custom card creation,
+  deletion, and JSON export.
+- Built-in short study-skills quiz with answer feedback and a session-only score.
+- Resource shortcuts to open tutoring prompts, create notes, manage flashcards,
+  and organise a study plan.
+- Summary export and a visible explanation that workspace data is device-local.
+- Workspace actions hand prompts to the existing chat screen using a one-time
+  sessionStorage handoff; the chat screen consumes and removes the pending prompt.
+
+Important limitations
+---------------------
+- Goals, notes and flashcards are stored in this browser only. There is no cloud
+  sync, cross-device profile, or server-side learning history in this workspace.
+- The built-in quiz checks general study strategies. It is not a Uganda-curriculum
+  subject assessment and does not create persistent mastery analytics.
+- Resource shortcuts ask the existing Alpha tutor for help; they do not claim that
+  a verified past-paper library or automatic curriculum database is connected.
+- AI chat and image generation still require their server-side environment setup
+  and valid provider access/billing as documented in DEPLOY.md.
+
+Validation performed for this package
+-------------------------------------
+- TypeScript transpilation syntax check is rerun for this final package; see the accompanying validation notes.
+- Full dependency installation timed out in this environment, so a complete production build, lint run, and automated test suite could not be verified here.
+- Full dependency installation timed out in this environment, so npm run build,
+  npm run test, and npm run lint could not be completed here. Do not describe this
+  package as having passed those checks. Run them in a network-enabled environment
+  before production deployment.
